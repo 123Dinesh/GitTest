@@ -13,7 +13,7 @@ Simple Login Page
 Username<input type="text" name="userid" id="userid"/>
 Password<input type="password" name="pswrd" id="pswrd"/>
 <input type="button" onclick="check(this.form)" value="Login" id="login"/>
-<input type="reset" value="Cancel"/>
+<input type="reset" value="Cancel" name="reset"/>
 </form>
 <script language="javascript">
 function check(form)/*function to check userid & password*/
@@ -21,12 +21,12 @@ function check(form)/*function to check userid & password*/
  /*the following code checkes whether the entered userid and password are matching*/
  if(form.userid.value == "dinesh" && form.pswrd.value == "sharma")
   {
-	 location.href='target.html';
+	 location.href='success.html';
     //window.open('target.html')/*opens the target page while Id & password matches*/
   }
  else
  {
-   alert("Error Password or Username")/*displays error message*/
+	 location.href='failure.html';
   }
 }
 </script>

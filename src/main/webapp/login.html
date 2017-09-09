@@ -9,10 +9,10 @@ Login page
 color:#00FF00;>
 Simple Login Page
 </h1>
-<form name="login">
-Username<input type="text" name="userid"/>
-Password<input type="password" name="pswrd"/>
-<input type="button" onclick="check(this.form)" value="Login"/>
+<form name="login" id="login">
+Username<input type="text" name="userid" id="userid"/>
+Password<input type="password" name="pswrd" id="pswrd"/>
+<input type="button" onclick="check(this.form)" value="Login" id="login"/>
 <input type="reset" value="Cancel"/>
 </form>
 <script language="javascript">
@@ -21,7 +21,8 @@ function check(form)/*function to check userid & password*/
  /*the following code checkes whether the entered userid and password are matching*/
  if(form.userid.value == "dinesh" && form.pswrd.value == "sharma")
   {
-    window.open('target.html')/*opens the target page while Id & password matches*/
+	 location.href='target.html';
+    //window.open('target.html')/*opens the target page while Id & password matches*/
   }
  else
  {
